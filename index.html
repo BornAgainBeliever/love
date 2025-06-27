@@ -7,9 +7,10 @@
     <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background: linear-gradient(135deg, #FFD700, #40E0D0);
             color: #1A3C34;
             margin: 0;
@@ -24,6 +25,7 @@
             color: #1A3C34;
             margin: 0 15px;
             text-decoration: none;
+            font-family: 'Roboto', sans-serif;
         }
         nav a:hover {
             color: #FF6F61;
@@ -32,31 +34,44 @@
             display: none;
         }
         h1 {
-            font-family: 'Georgia', serif;
+            font-family: 'Playfair Display', serif;
             color: #F8F1E9;
             text-align: center;
             font-size: 3rem;
+            margin-bottom: 20px;
         }
         .articles {
             max-width: 800px;
             margin: 20px auto;
+            background: #FFFFFF; /* White background for article container */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         .card {
-            background: #F8F1E9;
+            background: #FFFFFF; /* White background for cards */
             padding: 20px;
             margin: 10px 0;
-            border-radius: 10px;
+            border-radius: 8px;
+            border: 1px solid #E0E0E0; /* Subtle gray border */
             cursor: pointer;
-            border: 1px solid #FF6F61;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         .card:hover {
-            background: #FFD700;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
         .card h3 {
-            color: #1A3C34;
+            font-family: 'Playfair Display', serif;
+            color: #000000; /* Black font */
+            font-size: 1.8rem;
+            margin-bottom: 10px;
         }
         .card p {
-            color: #34495E;
+            font-family: 'Roboto', sans-serif;
+            color: #000000; /* Black font */
+            font-size: 1rem;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -73,13 +88,13 @@
         import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js';
 
         const firebaseConfig = {
-  apiKey: "AIzaSyC8xFENc723EWYajdQG_EIFW2b7MK_SoCI",
-  authDomain: "test-c6eb1.firebaseapp.com",
-  projectId: "test-c6eb1",
-  storageBucket: "test-c6eb1.firebasestorage.app",
-  messagingSenderId: "277025947734",
-  appId: "1:277025947734:web:82b4b4cdc4ce0b6728fbf7"
-};
+            apiKey: "AIzaSyC8xFENc723EWYajdQG_EIFW2b7MK_SoCI",
+            authDomain: "test-c6eb1.firebaseapp.com",
+            projectId: "test-c6eb1",
+            storageBucket: "test-c6eb1.firebasestorage.app",
+            messagingSenderId: "277025947734",
+            appId: "1:277025947734:web:82b4b4cdc4ce0b6728fbf7"
+        };
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
         const auth = getAuth(app);
