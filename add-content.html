@@ -131,6 +131,14 @@
             color: #d4a373;
         }
 
+        #content-form {
+            display: none;
+        }
+
+        #password-form {
+            text-align: center;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
@@ -155,7 +163,14 @@
     <div class="container">
         <section class="content-section">
             <h2>Add a New Article</h2>
-            <form id="article-form">
+            <div id="password-form">
+                <div class="form-group">
+                    <label for="password">Enter Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <button onclick="checkPassword()">Submit</button>
+            </div>
+            <form id="content-form">
                 <div class="form-group">
                     <label for="title">Article Title</label>
                     <input type="text" id="title" name="title" required placeholder="Enter the article title">
@@ -174,30 +189,43 @@
         </section>
     </div>
     <script>
+        // Ensure green background
         document.addEventListener('DOMContentLoaded', function() {
-            // Set background color
             document.body.style.background = '#2a6349';
+        });
 
-            // Handle form submission
-            const form = document.getElementById('article-form');
-            form.addEventListener('submit', function(event) {
-                event.preventDefault();
-                const title = document.getElementById('title').value;
-                const content = document.getElementById('content').value;
-                const media = document.getElementById('media').value;
-
-                // Get existing articles from localStorage
-                const articles = JSON.parse(localStorage.getItem('articles')) || [];
-                // Add new article
-                articles.push({ title, content, media });
-                // Save to localStorage
-                localStorage.setItem('articles', JSON.stringify(articles));
-                // Reset form
-                form.reset();
-                // Alert user and redirect
-                alert('Article added successfully! Return to the home page to view it.');
+        // Password check
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = 'yourSecretPassword'; // Replace with your secure password
+            if (password === correctPassword) {
+                document.getElementById('password-form').style.display = 'none';
+                document.getElementById('content-form').style.display = 'block';
+            } else {
+                alert('Incorrect password. Redirecting to home page.');
                 window.location.href = 'index.html';
-            });
+            }
+        }
+
+        // Handle form submission
+        const form = document.getElementById('content-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+            const media = document.getElementById('media').value;
+
+            // Get existing articles from localStorage
+            const articles = JSON.parse(localStorage.getItem('articles')) || [];
+            // Add new article
+            articles.push({ title, content, media });
+            // Save to localStorage
+            localStorage.setItem('articles', JSON.stringify(articles));
+            // Reset form
+            form.reset();
+            // Alert user and redirect
+            alert('Article added successfully! Return to the home page to view it.');
+            window.location.href = 'index.html';
         });
     </script>
 </body>
