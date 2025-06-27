@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Haven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Healing Haven</h1>
+            <p>A sanctuary for your soul</p>
+        </header>
+        <main>
+            <section class="input-section">
+                <h2>Share Your Light</h2>
+                <form id="healing-form">
+                    <div class="form-group">
+                        <label for="paragraph">Your Healing Words</label>
+                        <textarea id="paragraph" rows="5" placeholder="Write a paragraph to share your thoughts or find peace..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="url">Inspirational Link</label>
+                        <input type="url" id="url" placeholder="Enter a URL to a healing resource">
+                        <input type="text" id="keyword" placeholder="Enter a keyword for this link">
+                    </div>
+                    <button type="submit">Add to Haven</button>
+                </form>
+            </section>
+            <section class="content-section">
+                <h2>Your Sanctuary</h2>
+                <div id="paragraph-display"></div>
+                <ul id="url-list"></ul>
+            </section>
+        </main>
+        <footer>
+            <p>Created with love for those seeking peace &copy; 2025</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
