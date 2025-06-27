@@ -11,31 +11,34 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #FFD700, #40E0D0);
-            color: #1A3C34;
+            background: #FFFFFF; /* White background for entire page */
+            color: #000000; /* Black text */
             margin: 0;
             padding: 20px;
         }
         nav {
-            background: rgba(248, 241, 233, 0.9);
+            background: #FFFFFF; /* White background for nav */
             padding: 10px;
             text-align: center;
+            border-bottom: 1px solid #E0E0E0; /* Subtle gray border */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
         nav a {
-            color: #1A3C34;
+            color: #000000; /* Black text for nav links */
             margin: 0 15px;
             text-decoration: none;
             font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
         }
         nav a:hover {
-            color: #FF6F61;
+            color: #333333; /* Dark gray on hover */
         }
         #add-article-link {
             display: none;
         }
         h1 {
             font-family: 'Playfair Display', serif;
-            color: #F8F1E9;
+            color: #000000; /* Black text */
             text-align: center;
             font-size: 3rem;
             margin-bottom: 20px;
@@ -46,6 +49,7 @@
             background: #FFFFFF; /* White background for article container */
             padding: 20px;
             border-radius: 12px;
+            border: 1px solid #E0E0E0; /* Subtle gray border */
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         .card {
@@ -63,13 +67,13 @@
         }
         .card h3 {
             font-family: 'Playfair Display', serif;
-            color: #000000; /* Black font */
+            color: #000000; /* Black text */
             font-size: 1.8rem;
             margin-bottom: 10px;
         }
         .card p {
             font-family: 'Roboto', sans-serif;
-            color: #000000; /* Black font */
+            color: #000000; /* Black text */
             font-size: 1rem;
             line-height: 1.6;
         }
