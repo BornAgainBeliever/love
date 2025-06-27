@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #2a6349; /* Solid green background */
+            background: #2a6349;
             color: #1a3c34;
             line-height: 1.7;
             min-height: 100vh;
@@ -155,6 +155,28 @@
             margin-bottom: 1rem;
         }
 
+        .card video {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .add-content-link {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background: #2a6349;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: 'Inter', sans-serif;
+            transition: background 0.3s ease;
+        }
+
+        .add-content-link:hover {
+            background: #d4a373;
+        }
+
         .resource-list {
             list-style: none;
             padding: 0;
@@ -208,7 +230,8 @@
         }
 
         @keyframes gradientShift {
-            0% { background: linear-gradient(135deg, rgba(42, 99, 73, 0.4), rgba(212, 163, 115, 0.3)); }
+            0% { background: linear-gradien
+t(135deg, rgba(42, 99, 73, 0.4), rgba(212, 163, 115, 0.3)); }
             50% { background: linear-gradient(135deg, rgba(212, 163, 115, 0.3), rgba(42, 99, 73, 0.4)); }
             100% { background: linear-gradient(135deg, rgba(42, 99, 73, 0.4), rgba(212, 163, 115, 0.3)); }
         }
@@ -250,16 +273,21 @@
     <div class="container">
         <section class="content-section">
             <h2>A Haven for Your Soul</h2>
-            <div class="card">
-                <h4>The Unseen Hands of Mercy</h4>
-                <p>When a heart shatters, it feels as though the world has dimmed, and light may never again pierce the encroaching shadows. Yet, it is precisely in these moments of profound vulnerability that Allah's grace manifests most beautifully. He doesn't always heal us with a sudden, miraculous erasure of pain. Often, His healing comes through the unseen hands of kindness—the comfort offered by a loyal friend, the wise counsel of a family elder, or the unexpected empathy of a stranger. These are not mere coincidences; they are conduits of Divine love, sent to guide us back to wholeness.</p>
-                <p>Consider the gentle words of the Quran, a sacred scripture that resonates with promises of peace and resilience. Verses remind us that with every hardship, there is ease, a testament to Allah's unwavering presence. He provides strength when our own seems to falter, whispering patience into our souls and resilience into our spirits.</p>
-                <h4>Finding Solace in Remembrance</h4>
-                <p>One of the most potent forms of healing Allah bestows is the gift of remembrance (Dhikr). When our hearts are heavy, turning to Him in prayer, reflection, or supplication can be like finding an oasis in a parched desert. The very act of acknowledging His greatness and surrendering our pain to His will brings an incredible lightness. It's in this surrender that we realize we are not alone in our suffering; we are cradled in the vastness of His love.</p>
-                <p>Sometimes, healing manifests in the wisdom we gain from our trials. The very experiences that break us can also build us anew, forging a stronger, more compassionate self. Allah, in His infinite wisdom, allows these experiences not to punish, but to purify and elevate us. He sends insights, often through quiet introspection or the words of spiritual guides, that help us reframe our pain into purpose.</p>
-                <h4>The Dawn After the Darkness</h4>
-                <p>Healing is rarely a linear path; it's a journey of gentle steps forward, sometimes a few steps back, but always with the promise of a dawn after the longest night. Allah's healing is a continuous unfolding, a testament to His infinite patience and endless love. He orchestrates circumstances, touches hearts, and inspires actions that collectively weave a tapestry of recovery.</p>
-                <p>Ultimately, the most profound healing Allah offers is the mending of our connection with Him. In our brokenness, we are often drawn closer to our Creator, seeking solace and strength where worldly remedies fall short. And in that renewed connection, we find not just comfort for a shattered heart, but a profound and lasting peace that transcends all earthly sorrow. It's a beautiful, soul-deep healing, made possible through the endless compassion of the Divine.</p>
+            <a href="add-content.html" class="add-content-link">Add New Article</a>
+            <div id="articles">
+                <!-- Default article -->
+                <div class="card">
+                    <h4>The Unseen Hands of Mercy</h4>
+                    <p>When a heart shatters, it feels as though the world has dimmed, and light may never again pierce the encroaching shadows. Yet, it is precisely in these moments of profound vulnerability that Allah's grace manifests most beautifully. He doesn't always heal us with a sudden, miraculous erasure of pain. Often, His healing comes through the unseen hands of kindness—the comfort offered by a loyal friend, the wise counsel of a family elder, or the unexpected empathy of a stranger. These are not mere coincidences; they are conduits of Divine love, sent to guide us back to wholeness.</p>
+                    <p>Consider the gentle words of the Quran, a sacred scripture that resonates with promises of peace and resilience. Verses remind us that with every hardship, there is ease, a testament to Allah's unwavering presence. He provides strength when our own seems to falter, whispering patience into our souls and resilience into our spirits.</p>
+                    <h4>Finding Solace in Remembrance</h4>
+                    <p>One of the most potent forms of healing Allah bestows is the gift of remembrance (Dhikr). When our hearts are heavy, turning to Him in prayer, reflection, or supplication can be like finding an oasis in a parched desert. The very act of acknowledging His greatness and surrendering our pain to His will brings an incredible lightness. It's in this surrender that we realize we are not alone in our suffering; we are cradled in the vastness of His love.</p>
+                    <p>Sometimes, healing manifests in the wisdom we gain from our trials. The very experiences that break us can also build us anew, forging a stronger, more compassionate self. Allah, in His infinite wisdom, allows these experiences not to punish, but to purify and elevate us. He sends insights, often through quiet introspection or the words of spiritual guides, that help us reframe our pain into purpose.</p>
+                    <h4>The Dawn After the Darkness</h4>
+                    <p>Healing is rarely a linear path; it's a journey of gentle steps forward, sometimes a few steps back, but always with the promise of a dawn after the longest night. Allah's healing is a continuous unfolding, a testament to His infinite patience and endless love. He orchestrates circumstances, touches hearts, and inspires actions that collectively weave a tapestry of recovery.</p>
+                    <p>Ultimately, the most profound healing Allah offers is the mending of our connection with Him. In our brokenness, we are often drawn closer to our Creator, seeking solace and strength where worldly remedies fall short. And in that renewed connection, we find not just comfort for a shattered heart, but a profound and lasting peace that transcends all earthly sorrow. It's a beautiful, soul-deep healing, made possible through the endless compassion of the Divine.</p>
+                </div>
+                <!-- Dynamically added articles will appear here -->
             </div>
             <h3>Guiding Lights</h3>
             <ul class="resource-list">
@@ -276,14 +304,28 @@
     <script>
         // Ensure green background and local visitor counter
         document.addEventListener('DOMContentLoaded', function() {
-            // Set background color dynamically
+            // Set background color
             document.body.style.background = '#2a6349';
             
-            // Local visitor counter (increments per page load in a session)
+            // Local visitor counter
             let visitorCount = sessionStorage.getItem('visitorCount') || 0;
             visitorCount = parseInt(visitorCount) + 1;
             sessionStorage.setItem('visitorCount', visitorCount);
             document.getElementById('visitor-count').textContent = visitorCount;
+
+            // Load articles from localStorage
+            const articlesContainer = document.getElementById('articles');
+            const articles = JSON.parse(localStorage.getItem('articles')) || [];
+            articles.forEach(article => {
+                const articleDiv = document.createElement('div');
+                articleDiv.className = 'card';
+                articleDiv.innerHTML = `
+                    <h4>${article.title}</h4>
+                    <p>${article.content}</p>
+                    ${article.media ? `<video src="${article.media}" controls></video>` : ''}
+                `;
+                articlesContainer.appendChild(articleDiv);
+            });
         });
     </script>
 </body>
